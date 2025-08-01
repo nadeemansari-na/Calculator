@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaina+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Bhaloo'; */
+}
+h1{
+    font-size: 4rem;
+    font-weight: 400;
+}
+.maincontainer{
+    width: 100vw;
+    height: 100vh;
+}
+.maincontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    width: 330px;
+    height: 450px;
+    border-radius: 10px;
+    background-color: #342e2e;
+}
+.calculator{
+    /* border: 1px solid black; */
+    width: 300px;
+    height: 410px; 
+    border-radius: 10px;  
+    display: flex;
+    flex-direction: column; 
+    gap: 12px;
+}
+/* 24vw,62vh,22vw,58vh */
+.screen{
+    font-family: 'Baloo';
+    padding-right: 6px;
+    font-size: 30px;
+    text-align: end;
+    outline: none;
+    background-color: rgb(132, 244, 132);
+    width: 100%;
+    height: 16%;
+    border-radius: 10px;
+}
+.screen::placeholder{
+    color: black;
+}
+.buttonp{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4,77px);
+    grid-template-rows: repeat(5,68px);
+    width: 100%;
+    height: 80%;
+}
+button{
+    font-weight: 700;
+    color: white;
+    background-color: #393434;
+    cursor: pointer;
+    height: 61px;
+    width: 66px;
+    padding: 1px 2px 3px 1px;
+    border-radius: 9px;
+    border: none;
+    border: 1px solid black; 
+    /* background: linear-gradient(180deg ,hsl(0, 0%, 18%),#3f3f3f); */
+     /* box-shadow:inset 0px 0px 5px black; */
+     /* box-shadow: inset -8px 0 -8px rgba(0,0,0,0.5), */
+     /* inset 0 -8px 8px rgba(0,0,0,0.25),
+     0 0 2px rgba(0,0,0,0.25),
+     10px 28px 25px rgba(0,0,0,0.4); */
+     position: relative;
+}
+button:hover{
+    background-color: rgb(85, 83, 83);
+}
+button::before{
+    content: "";
+    position: absolute;
+    top:3px ;
+    right: 8px;
+    bottom: 10px;
+    left:4px;
+    border-radius: 10px;
+    /* background: linear-gradient(90deg , #2d2d2d , #4d4d4d); */
+    /* box-shadow: -5px -5px 15px rgba(0,0,0,0.1),
+    10px 5px 10px rgba(0,0,0,0.15); */
+    /* border-left: 1px solid rgba(0,0,0,0.27);
+    border-bottom: 1px solid rgba(0,0,0,0.27);
+    border-top: 1px solid rgba(0,0,0,0.6); */
+}
+.right{
+    margin-right: 7px;
+}
+.bottom{
+    margin-bottom: 7px;
+}
+.equal{
+    grid-row: span(2);
+    height: 130px ;
+}
+.red{
+    background-color: red;
+}
+.sky{
+    background-color: rgb(116, 116, 213);
+}
+
+@media (max-width:500px) {
+    .container{
+        width: 300px;
+    }
+    .calculator{
+        width: 270px;
+    }
+    .buttonp{
+        grid-template-columns: repeat(4,68px);
+    }
+}
