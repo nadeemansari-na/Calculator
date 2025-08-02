@@ -8,6 +8,7 @@ Array.from(buttons).forEach(e=>{
         if(v.target.innerHTML == `=`) {
             // console.log(v.target.innerHTML)
             string = eval(string)
+            string=string.toString()
              screen.value= string
              
         }else if(v.target.innerHTML == `Ac`){
